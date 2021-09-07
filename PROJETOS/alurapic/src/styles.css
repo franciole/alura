@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 60px;
+}
+
+a:link,
+a:visited {
+  border: none;
+  color: darkgreen;
+}
+
+a:hover {
+  background-color: azure;
+}
+
+a:link {
+  color: darkcyan;
+}
