@@ -1,0 +1,26 @@
+<html>
+  <!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Testando pattern</title>
+  </head>
+  <body>
+    <form>
+      <input pattern="[0-9]*" />
+      <input type="submit" value="Enviar dados" />
+    </form>
+  </body>
+  <script>
+    var alvo = "11a22b33c";
+    var exp = /(\d\d)(\w)/g;
+
+    // console.log(exp.test(alvo));
+
+    var resultado = null;
+
+    while ((resultado = exp.exec(alvo))) {
+      console.log(resultado);
+      console.log(exp.lastIndex);
+    }
+  </script>
+</html>
