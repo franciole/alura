@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'icones';
+  src: url(../font/icones.ttf);
+}
+
+body {
+  background-color: #1D232A;
+  font-family: 'Open Sans', 'icones', sans-serif;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+      display: grid;
+      grid-template-columns: auto 1fr;
+  }
+}
+
+.principal {
+  padding: 24px 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.titulo-pagina {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.titulo-secao {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+  .principal {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: 
+          "titulo-pagina titulo-pagina titulo-pagina"
+          "destaque-video destaque-video videos-recentes"
+          "secao-videos secao-videos secao-videos"
+          "produtos-recentes destaque-produtos destaque-produtos"
+          "secao-produtos secao-produtos secao-produtos"       
+      ;
+      column-gap: 32px;
+      padding: 16px 60px;
+      grid-column: 2;
+  }
+
+  .titulo-secao {
+      grid-column: span 4;
+  }
+}
+
+
+.secao {
+  display: grid;
+  gap: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  .secao {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .destaque-video {
+      grid-area: destaque-video;
+  }
+  
+  .videos-recentes {
+      grid-area: videos-recentes;
+  }
+  
+  .secao-videos {
+      grid-area: secao-videos;
+  }
+  
+  .destaque-produtos {
+      grid-area: destaque-produtos;
+  }
+  
+  .produtos-recentes {
+      grid-area: produtos-recentes;
+  }
+  
+  .secao-produtos {
+      grid-area: secao-produtos;
+  }
+}
